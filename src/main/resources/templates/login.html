@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link th:href="@{/css/login.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                <img th:src="@{/img/logo.png}" id="icon" alt="User Icon"/>
+            </div>
+
+            <!-- Login Form -->
+            <p th:if="${loginError}" class="error">Wrong user or password</p>
+            <form id="accesspanel" th:action="@{/login.html}" method="post">
+                <input type="text" id="username" class="fadeIn second" name="username"   placeholder="username" autofocus="autofocus">
+                <input type="text" id="password" class="fadeIn third" name="password"  placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Login" >
+            </form>
+
+            <!-- Remind Passowrd -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script th:src="@{/js/jquery-3.6.0.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+<script th:src="@{/js/site.js}"></script>
+</div>
+</body>
+</html>
