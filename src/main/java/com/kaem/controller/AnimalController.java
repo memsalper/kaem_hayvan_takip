@@ -68,6 +68,7 @@ public class AnimalController {
         return ls;
     }*/
 
+
     @PostMapping("/searchAnimal")
     @ResponseBody
     public List<Animal> searchAnimal(@RequestBody SearchData searchData){
